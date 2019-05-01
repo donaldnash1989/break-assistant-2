@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Break Assistant</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/clock.css" />
+    <link rel="stylesheet" type="text/css" href="./css/controls.css" />
+  </head>
+  <body>
+    <main>
+
+      <section id="window-options">
+        <div id="title"><span id="app-title">Break Assistant</span><span id="debug-title"></span></div>
+        <span class="titlebar-option" id="btn-close-window">&#x2716;</span>
+        <span class="titlebar-option" id="btn-minimize-window">&#8239;_</span>
+        <span class="titlebar-option" id="btn-toggle-settings"></span>
+        <span class="titlebar-option" id="btn-start" class="btn-start"></span>
+      </section>
+
+      <section id="countdown-clock">
+      </section>
+
+      <section id="schedule-entry-menu">
+        <label>
+          <input type="text" name="break-name" id="break-name" />
+          <input type="time" name="break-time" id="break-time" />
+          <span class="btn" id="btn-add-break">ADD</span>
+        </label>
+        <div id="break-display"></div>
+      </section>
+
+      <section id="settings-menu">
+        <div class="cb-container">
+          <label class="cb-label">24hr
+            <input type="checkbox" id="twentyfourhour" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="cb-container">
+          <label class="cb-label">Seconds
+            <input type="checkbox" id="showSeconds" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </section>
+
+    </main>
+    <script type="text/javascript" src="./js/menu.js">
+
+    </script>
+    <script type="text/javascript" src="./js/engine.js">
+
+    </script>
+  </body>
+</html>

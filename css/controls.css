@@ -1,0 +1,83 @@
+.btn {
+  display: inline-block;
+  background: #222;
+  border: 1px solid #FFF;
+  margin: .2rem;
+  padding: .2rem;
+  color: #FFF;
+  cursor: default;
+  text-transform: uppercase;
+  line-height: 1rem;
+  transition: all .5s;
+}
+
+.btn:hover {
+  background-color: #FFF;
+  color: #222;
+  cursor: pointer;
+}
+
+#btn-start {
+    -webkit-app-region: no-drag;
+}
+
+.cb-container {
+  padding: .1em;
+}
+
+label.cb-label {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+label.cb-label input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+label.cb-label span.checkmark {
+  position: absolute;
+  top: 0;
+  left: .2rem;
+  height: 25px;
+  width: 25px;
+  background-color: #222;
+  border: 1px solid #FFF;
+}
+
+label.cb-label:hover input[type=checkbox] ~ .checkmark {
+  background-color: #222;
+}
+
+label.cb-label input[type=checkbox]:checked ~ .checkmark {
+  background-color: #222;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+label.cb-label input[type=checkbox]:checked ~ .checkmark:after {
+  display: block;
+}
+
+label.cb-label .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

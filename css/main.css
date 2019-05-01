@@ -1,0 +1,113 @@
+*{margin:0;padding:0;box-sizing:border-box;}html,body{font-family:"Helvetica",Helvetica,sans-serif;background-color:#222;color:#FFF;line-height:1rem;overflow:hidden;}
+
+#window-options {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 2rem;
+  background-color: #222;
+    -webkit-app-region: drag;
+}
+
+#title {
+  display: inline;
+  line-height: 2rem;
+  padding-left: .5rem;
+}
+
+.titlebar-option {
+  width: 2rem;
+  height: 2rem;
+  background-color: #222;
+  font-size: 1.4rem;
+  transition: all .5s;
+  float: right;
+    -webkit-app-region: no-drag;
+  padding-left: 7px;
+}
+
+#btn-minimize-window {
+  font-weight: bold;
+  padding-left: 5px;
+  line-height: normal;
+}
+
+#btn-close-window {
+  line-height: normal;
+}
+
+#btn-toggle-settings {
+  background-image: url( '../res/img/cogwheels.png' );
+  background-size: 26px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#btn-start {
+  background-image: url( '../res/img/power-2.png' );
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#btn-close-window:hover {
+  background-color: #C00;
+  color: #FFF;
+  cursor: pointer;
+}
+
+#btn-minimize-window:hover {
+  background-color: #FFF;
+  color: #000;
+  cursor: pointer;
+}
+
+#btn-toggle-settings:hover {
+  background-color: #FFF;
+  color: #000;
+  cursor: pointer;
+  background-image: url( '../res/img/cogwheels-black.png' );
+}
+
+#btn-start:hover {
+  background-color: #FFF;
+  color: #000;
+  cursor: pointer;
+  background-image: url( '../res/img/power-black-2.png' );
+}
+
+.powered-on {
+  background-color: #D00;
+  border-radius: 50%;
+}
+
+#countdown-clock {
+
+}
+
+#countdown-clock:hover {
+
+}
+
+#settings-menu {
+  pointer-events: none;
+  opacity: 0;
+  transition: all .3s;
+  position: absolute;
+  width: 100vw;
+  height: calc( 100vh - 2rem );
+  bottom: 0;
+  background-color: #222;
+}
+
+#schedule-entry-menu {
+  pointer-events: initial;
+  opacity: 1;
+  transition: all .3s;
+  position: absolute;
+  width: 100vw;
+  height: calc( 100vh - 2rem );
+  bottom: 0;
+  background-color: #222;
+}

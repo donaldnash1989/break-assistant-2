@@ -1,0 +1,17 @@
+#countdown-controls {
+  height: 50vh;
+  line-height: 2rem;
+}
+
+#countdown-clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  line-height: 100vh;
+  font-size: 3rem;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all .3s;
+}
