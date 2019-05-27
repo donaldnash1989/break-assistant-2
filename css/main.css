@@ -110,4 +110,29 @@
   height: calc( 100vh - 2rem );
   bottom: 0;
   background-color: #222;
+  padding: .5rem;
+}
+
+.break-card {
+  padding: .25rem;
+  margin: .25rem;
+  background-color: rgba( 80 , 80 , 80 , 1 );
+}
+
+.break-card * {
+  width: 6rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.break-card-name {
+
+}
+
+.break-card-start {
+
+}
+
+.break-card-duration {
+
 }

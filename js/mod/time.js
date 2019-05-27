@@ -24,6 +24,22 @@ let millisToString = mil => {
   return `${ String( rh ).padStart( 2 , '0' ) }:${ String( rm ).padStart( 2 , '0' ) }:${ String( rs ).padStart( 2 , '0' ) }`
 }
 
+let stringToMillis = str => {
+  var result = 0
+  var h = parseInt( str.slice( 0 , 2 ) )
+  var m = parseInt( str.slice( 3 , 5 ) )
+  result = ( h * hourConv) + ( m * minConv )
+  if( str.length > 6 ) {
+    var s = parseInt( str.slice( 6 , 8 ) )
+    result += ( s * secConv )
+  }
+  return result
+}
+
+let minutesToMillis = min => {
+  return min * minConv
+}
+
 exports.update = ( ) => {
   now = new Date( )
   hh = now.getHours( )
@@ -47,10 +63,16 @@ exports.getMillis = ( ) => {
   return getTimeMillis( )
 }
 
+exports.getMillisString = milli => {
+  return millisToString( milli )
+}
+
 exports.toMillis = str => {
-  var h = parseInt( str.slice( 0 , 2 ) )
-  var m = parseInt( str.slice( 3 , 5 ) )
-  return ( h * 3600000) + ( m * 60000 )
+  return stringToMillis( str )
+}
+
+exports.mToMillis = min => {
+  return minutesToMillis( min )
 }
 
 exports.getRemaining = b => {

@@ -1,10 +1,10 @@
 .btn {
   display: inline-block;
-  background: #222;
-  border: 1px solid #FFF;
+  background: #CCC;
   margin: .2rem;
-  padding: .2rem;
-  color: #FFF;
+  margin-left: 1rem;
+  padding: .5rem;
+  color: #444;
   cursor: default;
   text-transform: uppercase;
   line-height: 1rem;
@@ -12,8 +12,15 @@
 }
 
 .btn:hover {
-  background-color: #FFF;
-  color: #222;
+  background-color: #444;
+  color: #CCC;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+  background-color: #444;
+  color: #CCC;
   cursor: pointer;
 }
 
@@ -80,4 +87,77 @@ label.cb-label .checkmark:after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input {
+  color: #CCC;
+  padding: .25rem;
+  margin: .25rem;
+  width: 5rem;
+}
+
+input[type=text] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba( 200 , 200 , 200 , 1 );
+  padding: .3rem;
+  margin: .1rem;
+  margin-left: 1.3rem;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+input[type=time] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba( 200 , 200 , 200 , 1 );
+  padding: .1rem;
+  margin: .1rem;
+  margin-left: 1rem;
+}
+
+input[type=time]:focus {
+  outline: none;
+}
+
+.styled-select {
+  display: inline-block;
+  border: 1px solid #CCC;
+  width: 5rem;
+  overflow: hidden;
+  background: #CCC url("./res/img/icon-select.png") no-repeat 90% 50%;
+  margin-bottom: -10px;
+  margin-left: 1rem;
+}
+
+.styled-select select {
+  color: #444;
+  padding: .25rem;
+  width: inherit;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.styled-select select option {
+  background-color: #CCC;
+  color: #444;
+}
+
+.styled-select select:focus {
+  outline: none;
 }

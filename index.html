@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="./css/clock.css" />
     <link rel="stylesheet" type="text/css" href="./css/controls.css" />
   </head>
-  <body>
-    <main>
+  <body id="body" tabindex="-1">
+    <main id="main">
 
       <section id="window-options">
         <div id="title"><span id="app-title">Break Assistant</span><span id="debug-title"></span></div>
@@ -25,7 +25,15 @@
         <label>
           <input type="text" name="break-name" id="break-name" />
           <input type="time" name="break-time" id="break-time" />
-          <span class="btn" id="btn-add-break">ADD</span>
+          <div class="styled-select">
+            <select id="select-duration">
+              <option value="15">15 min</option>
+              <option value="30">30 min</option>
+              <option value="45">45 min</option>
+              <option value="60">1 hr</option>
+            </select>
+          </div>
+          <span class="btn" id="btn-add-break" tabindex="0">ADD</span>
         </label>
         <div id="break-display"></div>
       </section>
@@ -33,24 +41,20 @@
       <section id="settings-menu">
         <div class="cb-container">
           <label class="cb-label">24hr
-            <input type="checkbox" id="twentyfourhour" checked />
+            <input type="checkbox" id="twentyfourhour" tabindex="-1" checked />
             <span class="checkmark"></span>
           </label>
         </div>
         <div class="cb-container">
           <label class="cb-label">Seconds
-            <input type="checkbox" id="showSeconds" checked />
+            <input type="checkbox" id="showSeconds" tabindex="-1" checked />
             <span class="checkmark"></span>
           </label>
         </div>
       </section>
 
     </main>
-    <script type="text/javascript" src="./js/menu.js">
-
-    </script>
-    <script type="text/javascript" src="./js/engine.js">
-
-    </script>
+    <script type="text/javascript" src="./js/menu.js"></script>
+    <script type="text/javascript" src="./js/engine.js"></script>
   </body>
 </html>
